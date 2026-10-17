@@ -1,0 +1,108 @@
+{
+  "programming_languages": [
+    "C",
+    "C++",
+    "C#",
+    "Java",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "R",
+    "Go",
+    "Rust",
+    "PHP",
+    "Ruby",
+    "Swift",
+    "Kotlin",
+    "SQL"
+  ],
+  "frontend": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "React.js",
+    "Angular",
+    "Vue.js",
+    "Next.js",
+    "Redux",
+    "Bootstrap",
+    "Tailwind CSS"
+  ],
+  "backend": [
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "Flask",
+    "Django",
+    "Spring Boot",
+    "REST API",
+    "GraphQL",
+    "ASP.NET",
+    ".NET"
+  ],
+  "databases": [
+    "MongoDB",
+    "MySQL",
+    "PostgreSQL",
+    "SQL",
+    "Firebase",
+    "Redis",
+    "SQLite",
+    "Oracle",
+    "Cassandra"
+  ],
+  "cloud": [
+    "AWS",
+    "Azure",
+    "Google Cloud",
+    "GCP",
+    "Heroku",
+    "DigitalOcean"
+  ],
+  "devops": [
+    "Docker",
+    "Kubernetes",
+    "Git",
+    "GitHub",
+    "CI/CD",
+    "Jenkins",
+    "Terraform",
+    "Ansible"
+  ],
+  "machine_learning": [
+    "Machine Learning",
+    "Deep Learning",
+    "NLP",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Keras",
+    "XGBoost"
+  ],
+  "data_science": [
+    "Pandas",
+    "NumPy",
+    "SciPy",
+    "Matplotlib",
+    "Seaborn",
+    "Tableau",
+    "Power BI"
+  ],
+  "tools": [
+    "Git",
+    "GitHub",
+    "Postman",
+    "Jira",
+    "VS Code"
+  ],
+  "operating_systems": [
+    "Linux",
+    "Ubuntu",
+    "Windows",
+    "MacOS"
+  ]
+}

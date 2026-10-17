@@ -1,0 +1,13 @@
+{
+  "js": "javascript",
+  "reactjs": "react",
+  "react.js": "react",
+  "node": "node.js",
+  "nodejs": "node.js",
+  "express": "express.js",
+  "mongo": "mongodb",
+  "postgres": "postgresql",
+  "amazon web services": "aws",
+  "gcp": "google cloud",
+  "sklearn": "scikit-learn"
+}

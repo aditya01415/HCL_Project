@@ -1,0 +1,33 @@
+services:
+  # Backend Node.js / Express API Service
+  - type: web
+    name: ai-resume-screening-backend
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false # Set your MongoDB Atlas connection string in Render Dashboard
+      - key: JWT_SECRET
+        generateValue: true
+      - key: AI_SERVICE_URL
+        fromService:
+          type: web
+          name: ai-resume-screening-ai-service
+          property: host
+
+  # Python / FastAPI AI Microservice (Sentence-BERT & Matching)
+  - type: web
+    name: ai-resume-screening-ai-service
+    runtime: python
+    plan: free
+    rootDir: ai-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
