@@ -3,7 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const FormData = require('form-data');
 
-const getBaseURL = () => process.env.AI_SERVICE_URL || 'http://127.0.0.1:8000';
+const getBaseURL = () => {
+  const raw = (process.env.AI_SERVICE_URL || 'http://127.0.0.1:8000').trim().replace(/\/+$/, '');
+  if (!/^https?:\/\//i.test(raw)) {
+    return `https://${raw}`;
+  }
+  return raw;
+};
 
 /**
   Check AI FastAPI service health status

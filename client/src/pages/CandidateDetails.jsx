@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
+import { getApiBaseUrl } from '../services/api';
 import { getCandidateById, updateCandidateStatus, screenCandidate, deleteCandidate } from '../services/candidateService';
 import ScoreBar from '../components/ScoreBar';
 import SkillBadge from '../components/SkillBadge';
@@ -96,9 +97,7 @@ const CandidateDetails = () => {
 
   const handleViewOriginalResume = () => {
     const token = localStorage.getItem('token') || '';
-    const rawApiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:5005/api';
-    const baseUrl = rawApiUrl.endsWith('/') ? rawApiUrl.slice(0, -1) : rawApiUrl;
-    const resumeUrl = `${baseUrl}/candidates/${candidateId}/resume?token=${token}`;
+    const resumeUrl = `${getApiBaseUrl()}/candidates/${candidateId}/resume?token=${token}`;
     window.open(resumeUrl, '_blank');
   };
 

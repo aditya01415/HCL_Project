@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+export const getApiBaseUrl = () => {
+  const raw = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:5005/api').trim().replace(/\/+$/, '');
+  return raw.endsWith('/api') ? raw : `${raw}/api`;
+};
+
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://127.0.0.1:5005/api',
+  baseURL: getApiBaseUrl(),
   headers: {
     'Content-Type': 'application/json'
   }
