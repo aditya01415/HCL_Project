@@ -1,12 +1,12 @@
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 _MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 _MODEL = None
 
-def _get_model() -> SentenceTransformer:
+def _get_model():
     global _MODEL
     if _MODEL is None:
+        from sentence_transformers import SentenceTransformer
         _MODEL = SentenceTransformer(_MODEL_NAME)
     return _MODEL
 
