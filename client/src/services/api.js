@@ -1,7 +1,10 @@
 import axios from 'axios';
 
 export const getApiBaseUrl = () => {
-  const raw = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:5005/api').trim().replace(/\/+$/, '');
+  let raw = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:5005/api').trim().replace(/\/+$/, '');
+  if (!/^https?:\/\//i.test(raw)) {
+    raw = `https://${raw}`;
+  }
   return raw.endsWith('/api') ? raw : `${raw}/api`;
 };
 
