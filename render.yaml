@@ -15,10 +15,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
       - key: AI_SERVICE_URL
-        fromService:
-          type: web
-          name: ai-resume-screening-ai-service
-          property: host
+        value: https://ai-resume-screening-ai-service.onrender.com
 
   # Python / FastAPI AI Microservice (Sentence-BERT & Matching)
   - type: web
@@ -41,10 +38,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        fromService:
-          type: web
-          name: ai-resume-screening-backend
-          property: host
+        value: https://ai-resume-screening-backend-8j3v.onrender.com/api
     routes:
       - type: rewrite
         source: /*

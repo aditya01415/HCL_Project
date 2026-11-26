@@ -47,7 +47,7 @@ const Register = () => {
       await register({ name, email, password, company });
       navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.message || 'Registration failed. Email may already exist.');
+      setError(err.response?.data?.error || err.response?.data?.message || 'Registration failed. Email may already exist.');
     } finally {
       setLoading(false);
     }

@@ -32,7 +32,7 @@ const Login = () => {
       await login(email, password);
       navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed. Please check credentials.');
+      setError(err.response?.data?.error || err.response?.data?.message || 'Login failed. Please check credentials.');
     } finally {
       setLoading(false);
     }
